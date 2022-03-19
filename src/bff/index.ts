@@ -11,7 +11,7 @@ export interface IRawHouseData {
   Description: string
   Lat: number
   Lng: number
-  Facilities: { [key: string]: 'yes' | 'no' }
+  Facilities: { [key: string]: string }
   Deposit: number
   Images: string[]
   LastUpdated: string

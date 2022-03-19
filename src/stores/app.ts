@@ -1,4 +1,4 @@
-import { defineStore, acceptHMRUpdate } from 'pinia'
+import { defineStore } from 'pinia'
 import { IHouse } from '../domain/models/House'
 
 export const useAppStore = defineStore({
@@ -14,7 +14,3 @@ export const useAppStore = defineStore({
     },
   },
 })
-
-if (import.meta.hot) {
-  import.meta.hot.accept(acceptHMRUpdate(useAppStore, import.meta.hot))
-}

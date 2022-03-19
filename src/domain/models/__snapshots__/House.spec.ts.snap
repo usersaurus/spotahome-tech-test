@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The House model matches snapshot when object is created with IRawHouseData info 1`] = `
+Object {
+  "address": "Paseo de la Castellana",
+  "city": "madrid",
+  "image": "https://d1052pu3rm1xk9.cloudfront.net/fsosw_960_540_verified_ur_6_50/74ef00db848c1ce44ea03677836b5bb61243e3f9d6a9d5a656d3c3cb.jpg",
+  "link": "https://www.spotahome.com/madrid/for-rent:apartments/79906?utm_source=housinganywhere&utm_medium=cffeeds&utm_campaign=normalads",
+  "title": "madrid - 280000",
+}
+`;
