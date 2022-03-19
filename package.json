@@ -9,6 +9,7 @@
     "format": "prettier .  --write"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
     "pinia": "^2.0.9",

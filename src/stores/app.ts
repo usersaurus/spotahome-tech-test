@@ -1,11 +1,18 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
+import { IHouse } from '../domain/models/House'
 
 export const useAppStore = defineStore({
   id: 'app',
 
-  state: () => ({}),
+  state: () => ({
+    houseList: [] as IHouse[],
+  }),
 
-  actions: {},
+  actions: {
+    setHouseList(houses: IHouse[]) {
+      this.houseList = houses
+    },
+  },
 })
 
 if (import.meta.hot) {

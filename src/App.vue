@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Hi from './views/Hi.vue'
+import HouseList from './views/HouseList.vue'
 </script>
 
 <template>
-  <Hi />
+  <HouseList />
 </template>
 
 <style></style>
