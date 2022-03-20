@@ -2,9 +2,9 @@ import { IRawHouseData } from '../../bff'
 
 export interface IHouse {
   title: string
-  link: string
   address: string
   city: string
+  link: string
   image: string
 }
 
