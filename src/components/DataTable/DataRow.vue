@@ -9,10 +9,18 @@ defineProps<IDataRow>()
 </script>
 
 <template>
-  <div v-for="value in Object.values(data)" :key="`${value}`">
+  <div v-for="value in Object.values(data)" :key="`${value}`" class="red">
     {{ value }}
     #############
   </div>
 </template>
 
-<style></style>
+<style lang="postcss">
+.red {
+  color: red;
+
+  &:hover {
+    color: blue;
+  }
+}
+</style>
