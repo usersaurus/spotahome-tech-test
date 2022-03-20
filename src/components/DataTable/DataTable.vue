@@ -12,8 +12,46 @@ defineProps<IDataTableProps>()
 </script>
 
 <template>
-  <div v-for="column in columns" :key="column">{{ column }} |</div>
-  <DataRow v-for="elemn in data" :key="Object.values(elemn)[0]" :data="elemn" />
+  <table class="data-table">
+    <thead class="data-table--header">
+      <tr>
+        <th v-for="column in columns" :key="column">{{ column }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <DataRow
+        v-for="elemn in data"
+        :key="Object.values(elemn)[0]"
+        :data="elemn"
+      />
+    </tbody>
+  </table>
 </template>
 
-<style></style>
+<style lang="postcss">
+.data-table {
+  border-collapse: collapse;
+  min-width: 100%;
+  background-color: #fff;
+  overflow: auto;
+  position: relative;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  @media only screen and (min-width: 600px) {
+    display: table;
+  }
+}
+
+.data-table--header {
+  background-color: #f9fafb;
+  text-align: left;
+  border-bottom: 2px solid #eff6ff;
+  text-transform: capitalize;
+
+  & th {
+    padding: 1rem;
+  }
+}
+</style>

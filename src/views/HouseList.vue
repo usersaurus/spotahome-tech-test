@@ -9,14 +9,22 @@ const columns = ref([] as string[])
 
 onMounted(async () => {
   const housesList = await getHousesList()
-  store.setHouseList(housesList)
 
+  store.setHouseList(housesList)
   columns.value = store.houseList[0] ? Object.keys(store.houseList[0]) : []
 })
 </script>
 
 <template>
-  <DataTable :columns="columns" :data="store.houseList" :loading="true" />
+  <div class="house-list">
+    <DataTable :columns="columns" :data="store.houseList" :loading="true" />
+  </div>
 </template>
 
-<style></style>
+<style lang="postcss">
+.house-list {
+  padding: 1rem;
+  position: relative;
+  max-width: 100%;
+}
+</style>
