@@ -10,9 +10,8 @@ import HouseList from './views/HouseList.vue'
 
 <style lang="postcss">
 .app {
-  height: 100vh;
-  background-color: #eff6ff;
-  width: 100vw;
+  height: auto;
+  width: 100%;
   position: absolute;
 }
 
@@ -20,5 +19,6 @@ html,
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  background-color: #eff6ff;
 }
 </style>
