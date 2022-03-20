@@ -1,7 +1,7 @@
 import { IRawHouseData } from '../../bff'
 
 export const getHouses = () =>
-  [
+  Promise.resolve([
     {
       Address: 'Paseo de la Castellana',
       City: 'madrid',
@@ -159,4 +159,4 @@ export const getHouses = () =>
       ListingReference: '79994',
       Link: 'https://www.spotahome.com/madrid/for-rent:apartments/79994?utm_source=housinganywhere&utm_medium=cffeeds&utm_campaign=normalads',
     },
-  ] as IRawHouseData[]
+  ] as IRawHouseData[])
