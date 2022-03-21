@@ -20,32 +20,27 @@ Array [
     "wrapperElement": <tr
       class="data-row"
     >
+      
       <td
         class="data-row--item"
       >
+        
         madrid - 280.000,00 €
+        
       </td>
       <td
         class="data-row--item"
       >
+        
         Paseo de la Castellana
+        
       </td>
       <td
         class="data-row--item"
       >
+        
         madrid
-      </td>
-      <td
-        class="data-row--item"
-      >
-        <a
-          href="https://d1052pu3rm1xk9.cloudfront.net/fsosw_960_540_verified_ur_6_50/74ef00db848c1ce44ea03677836b5bb61243e3f9d6a9d5a656d3c3cb.jpg"
-          target="_blank"
-        >
-          <i
-            class="fa-solid fa-image"
-          />
-        </a>
+        
       </td>
       <td
         class="data-row--item"
@@ -59,6 +54,19 @@ Array [
           />
         </a>
       </td>
+      <td
+        class="data-row--item"
+      >
+        <a
+          href="https://d1052pu3rm1xk9.cloudfront.net/fsosw_960_540_verified_ur_6_50/74ef00db848c1ce44ea03677836b5bb61243e3f9d6a9d5a656d3c3cb.jpg"
+          target="_blank"
+        >
+          <i
+            class="fa-solid fa-image"
+          />
+        </a>
+      </td>
+      
     </tr>,
   },
   VueWrapper {
@@ -79,32 +87,27 @@ Array [
     "wrapperElement": <tr
       class="data-row"
     >
+      
       <td
         class="data-row--item"
       >
+        
         madrid - 95.000,00 €
+        
       </td>
       <td
         class="data-row--item"
       >
+        
         calle virtudes
+        
       </td>
       <td
         class="data-row--item"
       >
+        
         madrid
-      </td>
-      <td
-        class="data-row--item"
-      >
-        <a
-          href="https://d1052pu3rm1xk9.cloudfront.net/fsosw_960_540_verified_ur_6_50/9617b48286d8cf89fe755b19d884901be10f6b613a6fc872be2e83be.jpg"
-          target="_blank"
-        >
-          <i
-            class="fa-solid fa-image"
-          />
-        </a>
+        
       </td>
       <td
         class="data-row--item"
@@ -118,6 +121,19 @@ Array [
           />
         </a>
       </td>
+      <td
+        class="data-row--item"
+      >
+        <a
+          href="https://d1052pu3rm1xk9.cloudfront.net/fsosw_960_540_verified_ur_6_50/9617b48286d8cf89fe755b19d884901be10f6b613a6fc872be2e83be.jpg"
+          target="_blank"
+        >
+          <i
+            class="fa-solid fa-image"
+          />
+        </a>
+      </td>
+      
     </tr>,
   },
 ]

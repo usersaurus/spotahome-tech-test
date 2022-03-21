@@ -5,29 +5,20 @@ interface IDataRow {
   data: IHouse
 }
 
-defineProps<IDataRow>()
+const props = defineProps<IDataRow>()
+const items = Object.keys(props.data).filter((key) => key !== 'id')
 </script>
 
 <template>
   <tr class="data-row">
-    <td class="data-row--item">
-      {{ data.title }}
-    </td>
-    <td class="data-row--item">
-      {{ data.address }}
-    </td>
-    <td class="data-row--item">
-      {{ data.city }}
-    </td>
-    <td class="data-row--item">
-      <a :href="data.image" target="_blank"
-        ><i class="fa-solid fa-image"></i
-      ></a>
-    </td>
-    <td class="data-row--item">
-      <a :href="data.link" target="_blank">
+    <td v-for="key in items" :key="key + data.id" class="data-row--item">
+      <a v-if="key === 'link'" :href="data.link" target="_blank">
         <i class="fa-solid fa-up-right-from-square"></i>
       </a>
+      <a v-else-if="key === 'image'" :href="data.image" target="_blank"
+        ><i class="fa-solid fa-image"></i
+      ></a>
+      <template v-else>{{ data[key] }}</template>
     </td>
   </tr>
 </template>

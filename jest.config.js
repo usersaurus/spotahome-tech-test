@@ -6,4 +6,7 @@ module.exports = {
     '^.+\\.vue$': '@vue/vue3-jest',
     '^.+\\js$': 'babel-jest',
   },
+  moduleNameMapper: {
+    '\\.(css|less)$': '<rootDir>/assets/css/__mocks__/styleMock.js',
+  },
 }

@@ -18,7 +18,7 @@ const changePage = (page: number) => {
 </script>
 
 <template>
-  <div class="pagination">
+  <div v-if="props.paginationData.current" class="pagination">
     <div
       class="pagination--back"
       :class="{ disabled: paginationData.current === 1 }"

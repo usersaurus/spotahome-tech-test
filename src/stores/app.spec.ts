@@ -1,6 +1,6 @@
 import { setActivePinia, createPinia } from 'pinia'
 import { useAppStore } from './app'
-import { houseList } from './__mocks__'
+import { houseList } from './__mocks__/app'
 
 describe('The store', () => {
   beforeEach(() => {

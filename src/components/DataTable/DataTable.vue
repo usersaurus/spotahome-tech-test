@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { IHouse } from '../../domain/models/House'
 import DataRow from './DataRow.vue'
+import Loading from 'vue-loading-overlay'
+import { ref, watchEffect } from 'vue'
+import 'vue-loading-overlay/dist/vue-loading.css'
 
 interface IDataTableProps {
   columns: string[]
@@ -8,10 +11,20 @@ interface IDataTableProps {
   loading: boolean
 }
 
-defineProps<IDataTableProps>()
+const props = defineProps<IDataTableProps>()
+const isLoading = ref(props.loading)
+
+watchEffect(() => {
+  isLoading.value = props.loading
+})
 </script>
 
 <template>
+  <loading
+    v-model:active="isLoading"
+    :can-cancel="false"
+    :is-full-page="true"
+  />
   <table class="data-table">
     <thead class="data-table--header">
       <tr>

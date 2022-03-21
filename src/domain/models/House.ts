@@ -1,6 +1,6 @@
 import { IRawHouseData } from '../../bff'
-
 export interface IHouse {
+  [key: string]: string
   id: string
   title: string
   address: string
