@@ -1,9 +1,10 @@
-// import axios from 'axios'
-// import { IRawHouseData } from '../bff'
+import axios from 'axios'
+import { IRawHouseData, IPagination } from '../bff'
 
-// export const getHouses = () =>
-//   axios
-//     .get<IRawHouseData[]>('http://localhost:3000/gethouses')
-//     .then(({ data }) => data)
-
-export { getHouses } from './__mocks__/index'
+export const getHouses = (page: number) =>
+  axios
+    .get<{ pagination: IPagination; data: IRawHouseData[] }>(
+      'http://localhost:3000/gethouses',
+      { params: { page } }
+    )
+    .then(({ data }) => data)

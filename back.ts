@@ -6,10 +6,11 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.get('/gethouses', async (_req, res, next) => {
-  const houses = await getHouses()
-  res.send(houses)
+app.get('/gethouses', async (req, res, next) => {
+  const page = ((+req.query.page! as number) || 1) as number
+  const houses = await getHouses(page)
 
+  res.send(houses)
   next()
 })
 

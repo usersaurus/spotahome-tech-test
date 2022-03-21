@@ -7,10 +7,13 @@ describe('The store', () => {
     setActivePinia(createPinia())
   })
 
-  it('updates houseList when setHouseList is called', () => {
+  it('updates houseList and pagination when setHouseList is called', () => {
     const store = useAppStore()
 
-    store.setHouseList(houseList)
+    store.setHouseList({
+      houses: houseList,
+      pagination: { last: 100, current: 2, pageSize: 10, totalElements: 10000 },
+    })
 
     expect(store.houseList).toEqual(houseList)
   })

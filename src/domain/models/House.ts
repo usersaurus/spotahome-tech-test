@@ -1,6 +1,7 @@
 import { IRawHouseData } from '../../bff'
 
 export interface IHouse {
+  id: string
   title: string
   address: string
   city: string
@@ -10,6 +11,7 @@ export interface IHouse {
 
 export const House = (props: IRawHouseData) =>
   ({
+    id: props.ListingReference,
     title: `${props.City} - ${formatCurrency(
       props.CountryCode,
       props.Currency

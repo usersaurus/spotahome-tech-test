@@ -19,11 +19,7 @@ defineProps<IDataTableProps>()
       </tr>
     </thead>
     <tbody>
-      <DataRow
-        v-for="elemn in data"
-        :key="Object.values(elemn)[0]"
-        :data="elemn"
-      />
+      <DataRow v-for="elemn in data" :key="elemn.id" :data="elemn" />
     </tbody>
   </table>
 </template>
