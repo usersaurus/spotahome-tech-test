@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Pagination component should render correctly 1`] = `
+<div
+  class="pagination"
+>
+  <div
+    class="pagination--back disabled"
+  >
+    <i
+      class="fa-solid fa-caret-left"
+    />
+  </div>
+  <div
+    class="pagination--current"
+  >
+    1
+  </div>
+  <div
+    class="pagination--next"
+  >
+    <i
+      class="fa-solid fa-caret-right"
+    />
+  </div>
+</div>
+`;

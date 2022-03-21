@@ -4,13 +4,15 @@ import { IPagination } from '../../bff'
 interface IPaginationProps {
   paginationData: IPagination
 }
-defineProps<IPaginationProps>()
 
+const props = defineProps<IPaginationProps>()
 const emit = defineEmits<{
   (e: 'pageChanged', page: number): void
 }>()
 
 const changePage = (page: number) => {
+  if (page < 0 || page > props.paginationData.last) return
+
   emit('pageChanged', page)
 }
 </script>
@@ -19,27 +21,41 @@ const changePage = (page: number) => {
   <div class="pagination">
     <div
       class="pagination--back"
-      @click="
-        paginationData.current > 1 &&
-          emit('pageChanged', paginationData.current - 1)
-      "
+      :class="{ disabled: paginationData.current === 1 }"
+      @click="changePage(paginationData.current - 1)"
     >
-      <i class="fa-solid fa-arrow-left"></i>
+      <i class="fa-solid fa-caret-left"></i>
     </div>
     <div class="pagination--current">{{ paginationData.current }}</div>
     <div
       class="pagination--next"
-      @click="
-        paginationData.last !== paginationData.current &&
-          emit('pageChanged', paginationData.current + 1)
-      "
+      :class="{ disabled: paginationData.current === paginationData.last }"
+      @click="changePage(paginationData.current + 1)"
     >
-      <i class="fa-solid fa-arrow-right"></i>
+      <i class="fa-solid fa-caret-right"></i>
     </div>
   </div>
 </template>
 
 <style lang="postcss">
 .pagination {
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
+  padding-top: 16px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 13pt;
+}
+
+.pagination--next,
+.pagination--back {
+  cursor: pointer;
+
+  &.disabled {
+    cursor: not-allowed;
+
+    color: gray;
+  }
 }
 </style>
